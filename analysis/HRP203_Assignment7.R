@@ -23,7 +23,7 @@ library(tidyr)
 library(jtools)
 
 # Load data ---------------------------------------------------------------
-df_cohort <- read.csv("Documents/GitHub/HRP_203_Assignment_7/data_raw/cohort.csv")
+df_cohort <- read.csv("data_raw/cohort.csv")
 df_cohort <- df_cohort %>% 
   rename(sex = female)
 
@@ -57,7 +57,7 @@ kable(df_prop_table, format = "pipe")
 
 # Analysis ----------------------------------------------------------------
 # Plot the relationship between cost and all the other variables
-df_plot <- read.csv("Documents/GitHub/HRP_203_Assignment_7/data_raw/cohort.csv")
+df_plot <- read.csv("data_raw/cohort.csv")
 df_plot <- df_plot %>% 
   rename(sex = female)
 
@@ -105,4 +105,3 @@ lm_cohort <- lm(cost ~ age + sex + cardiac + smoke, data = df_cohort)
 summary(lm_cohort)
 
 summ(lm_cohort)
-
